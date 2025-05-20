@@ -10,11 +10,11 @@ public class TimeComparisonTest {
     static final int WARMUP = 10_000;
 
     static class Work {
-        public final String description;
-        public final byte[] data;
-        public final Consumer<FixMsg>[] fetchFields;
+        final String description;
+        final byte[] data;
+        final Consumer<FixMsg>[] fetchFields;
 
-        public Work(String description, byte[] data, Consumer<FixMsg>... fetchFields) {
+        Work(String description, byte[] data, Consumer<FixMsg>... fetchFields) {
             this.description = description;
             this.data = data;
             this.fetchFields = fetchFields;
